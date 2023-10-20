@@ -13,7 +13,13 @@ This DFF-Seq Snakemake pipeline processes paired-end FASTQ files and generates B
 
 ### Data files
 
-- Three FASTQ files per sample: R1, R2, R3 - where R2 correspond to the UMI sequence.
+- Three FASTQ files per sample: R1, R2, R3 - where R2 correspond to the UMI sequence in the following format:
+```
+@A00876:427:H3WF7DRX3:1:2101:1181:1000 2:N:0:CACCGG
+GTAGGATA
++
+FFFFFFFF
+```
 
 ### Usage
 
