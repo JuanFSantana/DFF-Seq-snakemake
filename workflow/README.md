@@ -73,5 +73,5 @@ RESULTS
 |   │   │   ├── COMBINED
 |   │   │   │   ├── .bw replicas combined
 |   │   ├── BEDGRAPH
-|   │       ├── .bg spike-in or library normalized files
+|   │   │   ├── .bg spike-in or library normalized files
 ```
