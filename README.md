@@ -10,7 +10,7 @@ This DFF-Seq Snakemake pipeline processes paired-end FASTQ files and generates B
 
 - snakemake
 - python 3+
-- Linux environment
+- Linux OS
 - Internet connection for fetching genomes
 
 ### Data files
