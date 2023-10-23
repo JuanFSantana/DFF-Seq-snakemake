@@ -32,7 +32,7 @@ cd path/to/project-workdir/
 ```
 2. Clone the repository.  
 
-3. Copy gzip FASTQ files into the `workflow` directory (perform next steps from inside this directory)
+3. Copy zipped FASTQ files into the `workflow` directory (perform next steps from inside this directory)
 
 4. Install requirements by running: `setup_environment.py`
 
@@ -85,9 +85,9 @@ RESULTS
 │   ├── DEDUP
 │   │   ├── bed.dedup files
 |   │   ├── BIGWIG
-│   │   │   ├── .bw spike-in or library normalized files
+│   │   │   ├── .bw files spike-in normalized | library normalized | no normalization
 |   │   │   ├── COMBINED
 |   │   │   │   ├── .bw replicas combined
 |   │   ├── BEDGRAPH
-|   │   │   ├── .bg spike-in or library normalized files
+|   │   │   ├── .bg files spike-in normalized | library normalized | no normalization
 ```
