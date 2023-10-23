@@ -185,7 +185,7 @@ void dedup (std::map<std::string, std::string>& bed_paths, std::filesystem::path
         std::string above_strand = strand;
        
         if(total_reads > 0){
-            if((above_chromosome == below_chromosome) && (above_start == below_start) && (above_end == below_end) && (above_strand == below_strand)){
+            if((above_chromosome == below_chromosome) && (above_start == below_start) && (above_end == below_end)){
                 // copmaring umi barcodes between reads
                 std::string above_umi_barcodes = read_umi_map[above_id];
                 std::string below_umi_barcodes = read_umi_map[below_id];
