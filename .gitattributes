@@ -1,1 +1,1 @@
-workflow/tools/ linguist-vendored
+workflow/tools/* linguist-vendored
