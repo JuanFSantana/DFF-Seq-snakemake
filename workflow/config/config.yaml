@@ -40,12 +40,12 @@ main_genome:
 # Specify the spike-in genome to use (from UCSC). If no spike-in was used, delete the assembly next to 'organism' and leave it blank. A library size normalization will be applied instead.
 
 spikein_genome:
-  organism: 
+  organism: dm6
 
 # Normalization Type
 # By default, the application will perform spike-in normalization when both a main and spike-in genome are provided. Alternatively, it will apply library size normalization when a spike-in genome is not provided. If no normalization is desired, change 'turn_off_normalization' below to 'True'.
 
-turn_off_normalization: True
+turn_off_normalization: False
 ###########################################
 
 
