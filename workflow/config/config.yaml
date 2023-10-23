@@ -1,0 +1,57 @@
+# config.yaml
+
+##### Don't change the number below this line #####
+number: 1
+##### Don't change the number above this line #####
+
+###########################################
+# Specify the number of threads to use (int)
+
+threads: 80 # Threads to be used per sample
+###########################################
+
+
+###########################################
+# Specify the minimum read length (int)
+
+minimum_read_length: 18 # Shortest allowable length for reads during trimming and mapping
+###########################################
+
+
+###########################################
+# Define groups of replicated samples using descriptive group names
+# The name beofre the colon represent the combined names for groups of replicated samples.
+# The names after the colon inside the brackets represent the individual sample names corresponding to each dataset in the samplekey.csv file.
+# If no replicas, delete the lines up to 'replicas'
+
+replicas:
+  'DMSO-polii-1-DMSO-polii-2': ['DMSO-polii-1', 'DMSO-polii-2']
+  'DMSO-K4-1-DMSO-K4-2': ['DMSO-K4-1', 'DMSO-K4-2']
+###########################################
+
+
+
+###########################################
+# Specify the main genome to use (from UCSC)
+
+main_genome:
+  organism: hg38
+
+# Specify the spike-in genome to use (from UCSC). If no spike-in was used, delete the assembly next to 'organism' and leave it blank. A library size normalization will be applied instead.
+
+spikein_genome:
+  organism: 
+
+# Normalization Type
+# By default, the application will perform spike-in normalization when both a main and spike-in genome are provided. Alternatively, it will apply library size normalization when a spike-in genome is not provided. If no normalization is desired, change 'turn_off_normalization' below to 'True'.
+
+turn_off_normalization: True
+###########################################
+
+
+
+###########################################
+# Specify the extension of the bowtie indexed genome. If the genome(s) contain more than 4 billion nucleotides, specify "ebwtl", otherwise leave as "ebwt"
+
+extension: ebwt
+###########################################

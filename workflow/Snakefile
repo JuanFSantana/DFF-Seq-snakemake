@@ -1,0 +1,60 @@
+configfile: "config/config.yaml"
+
+import csv
+
+# Read the CSV and store information in a dictionary
+samples = {}
+with open("config/sampleskey.csv", "r") as f:
+    reader = csv.DictReader(f)
+    for row in reader:
+        samples[row['name']] = [row['fastq_1'], row['fastq_2'], row['fastq_3']]
+
+# Create a list of deduped file paths
+deduped_files = [f"RESULTS/MAPPED/DEDUP/{sample}.dedup" for sample in samples.keys()]
+
+# Determine the final targets based on whether replicas are defined in the config
+if config.get('replicas'):
+    targets = [f"RESULTS/MAPPED/DEDUP/BIGWIG/COMBINED/{replica_set}.bw" for replica_set in config['replicas']]
+else:
+    targets = [f"RESULTS/MAPPED/DEDUP/BIGWIG/{sample}.bw" for sample in samples.keys()]
+
+main_genome = config['main_genome']['organism']
+spikein_genome = config['spikein_genome']['organism']
+number = config['number']
+extension = config['extension']
+normalization = config['turn_off_normalization']
+
+rule all:
+    input:
+        f"genomes/{main_genome}-{spikein_genome}.{number}.{extension}" if spikein_genome else f"genomes/{main_genome}.{number}.{extension}",
+        targets
+
+# smk files containing rules
+if not config['spikein_genome']['organism']:
+    include: "rules/download_main_genome.smk"
+    include: "rules/index_main_genome.smk"
+else:
+    include: "rules/download_genomes.smk"
+    include: "rules/index_genome.smk"
+include: "rules/trimming.smk"
+if not config['spikein_genome']['organism']:
+    include: "rules/mapping_main.smk"
+else:
+    include: "rules/mapping.smk"
+include: "rules/sam_to_bed.smk"
+include: "rules/deduping.smk"
+include: "rules/sentinel.smk"
+if not config['spikein_genome']['organism']:
+    include: "rules/library_norm.smk"
+    include: "rules/bg_lib.smk"
+    include: "rules/bw_lib.smk"
+    include: "rules/merge_replica_bw_lib.smk"
+else:
+    include: "rules/spikein.smk"
+    include: "rules/bg.smk"
+    include: "rules/bw.smk"
+    include: "rules/merge_replica_bw.smk" 
+
+
+
+
