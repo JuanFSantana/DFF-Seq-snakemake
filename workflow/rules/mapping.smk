@@ -18,5 +18,5 @@ rule bowtie:
         genome_index_base=$(echo "{input.genome_index}" | sed 's/\\.[0-9]\\+\\.ebwt[l]*$//')
 
         mkdir -p RESULTS/MAPPED
-        tools/bowtie/bowtie -x $genome_index_base -1 {input.r1} -2 {input.r2} --fr --best --fullref --sam --allow-contain --chunkmbs 5000 --threads {params.threads} --minins {params.minimum_read_length} 1> {output.output_1} 2> {output.output_2}
+        tools/bowtie/bowtie -x $genome_index_base -1 {input.r1} -2 {input.r2} --fr --best --fullref --sam --allow-contain --chunkmbs 5000 --threads {params.threads} --maxins 1000 --minins {params.minimum_read_length} 1> {output.output_1} 2> {output.output_2}
         """)
