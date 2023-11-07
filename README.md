@@ -1,6 +1,6 @@
 Juan F. Santana, Ph.D. (juan-santana@uiowa.edu), University of Iowa, Iowa City, I.A.
 
-# DFF-Seq snakemake pipeline
+# DFF-Seq snakemake pipeline 
 
 This DFF-Seq Snakemake pipeline processes paired-end FASTQ files and generates BigWig files. It includes deduplication of UMI-duplicated reads and offers options for either spike-in or library normalization. To customize the pipeline, please refer to the instructions in how to modify the config/config.yaml as explained below.
 

@@ -195,15 +195,15 @@ void dedup (std::map<std::string, std::string>& bed_paths, std::filesystem::path
                     total_duplicates++;
                 }
                 else{
-                    std::cout << above_chromosome << '\t' << above_start << '\t' << above_end << '\t' << above_id << '\t' << above_strand << '\n';
+                    std::cout << above_chromosome << '\t' << above_start << '\t' << above_end << '\t' << above_id << '\t' << above_quality << '\t' << above_strand << '\n';
                 }
             }  
             else{
-                std::cout << above_chromosome << '\t' << above_start << '\t' << above_end << '\t' << above_id << '\t' << above_strand << '\n';
+                std::cout << above_chromosome << '\t' << above_start << '\t' << above_end << '\t' << above_id << '\t' << above_quality << '\t' << above_strand << '\n';
             }
         }
         else{
-            std::cout << above_chromosome << '\t' << above_start << '\t' << above_end << '\t' << above_id << '\t' << above_strand << '\n';
+            std::cout << above_chromosome << '\t' << above_start << '\t' << above_end << '\t' << above_id << '\t' << above_quality << '\t' << above_strand << '\n';
         }
 
         below_chromosome = above_chromosome;

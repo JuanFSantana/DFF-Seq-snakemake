@@ -11,7 +11,7 @@ rule trimgalore:
     shell: 
         """
         mkdir -p RESULTS/TRIMMED
-        tools/TrimGalore/trim_galore --paired {input.r1} {input.r3} --small_rna --quality 0 \
+        tools/TrimGalore/trim_galore --paired {input.r1} {input.r3} --quality 0 --adapter AGATCGGAAGAGCACACGTCTGAACTCCAGTCA --adapter2 AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT \
             --length {params.minimum_read_length} --dont_gzip \
             -o RESULTS/TRIMMED/ > /dev/null 2>&1
         
