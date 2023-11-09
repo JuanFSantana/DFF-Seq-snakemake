@@ -89,7 +89,7 @@ RESULTS
 │   ├── .sam files
 │   ├── .bed files
 │   ├── DEDUP
-│   │   ├── bed.dedup files
+│   │   ├── .bed deduped files
 |   │   ├── BIGWIG
 │   │   │   ├── .bw files spike-in normalized | library normalized | no normalization
 |   │   │   ├── COMBINED
