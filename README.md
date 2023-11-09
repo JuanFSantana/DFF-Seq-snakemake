@@ -15,7 +15,11 @@ This DFF-Seq Snakemake pipeline processes paired-end FASTQ files and generates B
 
 ### Data files
 
-- Illumina adapters sequences should be `--adapter AGATCGGAAGAGCACACGTCTGAACTCCAGTCA --adapter2 AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT` 
+- The following sequences are used for adapter trimming:
+ ```
+Read1 AGATCGGAAGAGCACACGTCTGAACTCCAGTCA 
+Read3 AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT
+```
 
 - Three FASTQ files per sample: R1, R2, R3 - where R2 correspond to the UMI sequence in the following format:
 ```
