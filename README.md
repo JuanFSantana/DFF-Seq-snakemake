@@ -29,7 +29,7 @@ GTAGGATA
 FFFFFFFF
 ```
 
-### Usage
+## Usage
 
 1. Create working directory and move into it: 
 ```
@@ -74,7 +74,7 @@ is not provided. If no normalization is desired, change 'turn_off_normalization'
 
 7. Run the pipeline: `snakemake --cores {integer}`
 
-### Output
+## Output
 
 The pipeline generates the following output directories:
 
