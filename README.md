@@ -74,6 +74,10 @@ is not provided. If no normalization is desired, change 'turn_off_normalization'
 
 7. Run the pipeline: `snakemake --cores {integer}`
 
+## Flowchart
+
+![snakemake-flowchart](https://github.com/JuanFSantana/DFF-Seq-snakemake/assets/38702786/d1f9855c-f3c3-490e-8929-39b17dd15ca6)
+
 ## Output
 
 The pipeline generates the following output directories:
