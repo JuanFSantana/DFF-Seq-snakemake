@@ -76,7 +76,7 @@ is not provided. If no normalization is desired, change 'turn_off_normalization'
 
 ## Flowchart
 
-<img src="https://github.com/Juser/DFF-Seq-snakemake/assets/38702786/d1f9855c-f3c3-490e-8929-39b17dd15ca6" alt="snakemake-flowchart" width="300">
+<img width="481" alt="snakemake-flowchart-50" src="https://github.com/JuanFSantana/DFF-Seq-snakemake/assets/38702786/685fb7ee-bd81-4424-95c2-79a88a0c3ce8">
 
 ## Output
 
