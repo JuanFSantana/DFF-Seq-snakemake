@@ -12,7 +12,7 @@
 
 >Danecek P, Bonfield JK, Liddle J, Marshall J, Ohan V, Pollard MO, Whitwham A, Keane T, McCarthy SA, Davies RM, Li H, Twelve years of SAMtools and BCFtools, GigaScience (2021) 10(2) giab008.
 
-[bowtie2](https://bowtie-bio.sourceforge.net/index.shtml)
+[bowtie](https://bowtie-bio.sourceforge.net/index.shtml)
 
 >Langmead, B., Trapnell, C., Pop, M. and Salzberg, S.L. (2009) Ultrafast and memory-efficient alignment of short DNA sequences to the human genome. Genome Biol, 10, R25
 
