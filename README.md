@@ -1,4 +1,5 @@
 Juan F. Santana, Ph.D. (juan-santana@uiowa.edu), University of Iowa, Iowa City, I.A.
+The workflow has been published in [Santana et al., 2024](https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gkad1253/7513806).
 
 # DFF-Seq snakemake pipeline 
 
