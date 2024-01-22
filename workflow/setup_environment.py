@@ -11,7 +11,7 @@ def install_tool(tool_name):
         subprocess.call(["sudo", "apt-get", "install", "pigz"])
         os.symlink("/usr/bin/pigz", "/usr/local/bin/unpigz")
     elif tool_name == "pandas":
-        subprocess.call(["pip", "install", "pandas"])
+        subprocess.call(["pip", "install", "pandas==1.3.0"])
     print(f"{tool_name} is now installed.")
 
 # Check if all tools are available
