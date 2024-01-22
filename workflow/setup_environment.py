@@ -41,5 +41,15 @@ if os.path.isdir(scripts_directory):
     for filename in os.listdir(scripts_directory):
         script_path = os.path.join(scripts_directory, filename)
         os.chmod(script_path, 0o755)  # Make the script executable
+
+# Make all scripts in the 'tools/' directory and its subdirectories executable
+tools_directory = "tools"
+if os.path.isdir(tools_directory):
+    print(f"Checking and making scripts in '{tools_directory}' and its subdirectories executable...")
+    for root, dirs, files in os.walk(tools_directory):
+        for filename in files:
+            script_path = os.path.join(root, filename)
+            os.chmod(script_path, 0o755)  # Make the script executable
+            print(f"'{script_path}' is now executable.")
         print(f"'{filename}' is now executable.")
 
